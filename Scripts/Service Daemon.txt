@@ -1,0 +1,17 @@
+How to enable plug-n-play
+
+1.Create a service daemon description describing the shell script to be called
+after boot-up network initialization.
+2.Move the service daemon file to /etc/systemd/system. Save it as {proj-name}.service.
+3.Enable executable rights to the user for the service file.
+4.Execute systemctl start {proj-name}.service.
+5.Make sure there are no errors in the resulting log file. If there are any fix them.
+6.Execute systemctl enable {proj-name}.service to enable daemon startup at boot up.
+
+
+Codes on pi:
+daq.py
+SignalFeaturePersistence.py
+redpitaya_scpi.py
+liveEstimate.py
+lstm_model.h5

@@ -1,0 +1,11 @@
+[Unit]
+Description=Object Detection Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/bin/bash /home/pi/Desktop/Scripts/projectscript.sh
+
+[Install]
+WantedBy=multi-user.target
